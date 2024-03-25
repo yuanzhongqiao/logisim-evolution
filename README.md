@@ -1,137 +1,102 @@
-[![Logisim-evolution](docs/img/logisim-evolution-logo.png)](https://github.com/logisim-evolution/logisim-evolution)
-
----
-
-# Logisim-evolution #
-
-* **Table of contents**
-  * [Features](#features)
-  * [Requirements](#requirements)
-  * **[Downloads](#download)**
-    * [Package Manager](#package-manager)
-    * [Nightly builds (unstable)](#nightly-builds)
-  * [Pictures of Logisim-evolution](docs/pics.md)
-  * [More Information](docs/docs.md)
-  * [Bug reports & feature requests](https://github.com/logisim-evolution/logisim-evolution/issues)
-  * [For developers](docs/developers.md)
-  * [How to contribute](docs/developers.md#how-to-contribute)
-  * [Credits](docs/credits.md)
-
----
-
-## Features ##
-
-`Logisim-evolution` is educational software for designing and simulating digital logic circuits.
-`Logisim-evolution` is [free](#license), [open-source](https://github.com/logisim-evolution), and [cross-platform](#requirements).
-
-Project highlights:
-
-* easy to use circuit designer,
-* logic circuit simulations,
-* chronogram (to see the evolution of signals in your circuit),
-* electronic board integration (schematics can be simulated on real hardware),
-* VHDL components (components behavior can be specified in VHDL!),
-* TCL/TK console (interfaces between the circuit and the user),
-* huge library of components (LEDs, TTLs, switches, SoCs),
-* supports [multiple languages](docs/docs.md#translations),
-* and more!
-
-[![Logisim-evolution](docs/img/logisim-evolution-01-small.png)](docs/pics.md)
-[![Logisim-evolution](docs/img/logisim-evolution-02-small.png)](docs/pics.md)
-[![Logisim-evolution](docs/img/logisim-evolution-03-small.png)](docs/pics.md)
-
----
-
-## Requirements ##
-
-`Logisim-evolution` is a Java application; therefore, it can run on any operating system supporting the Java runtime enviroment.
-It requires [Java 16 (or newer)](https://www.oracle.com/java/technologies/javase-downloads.html).
-
----
-
-## Download ###
-
-`Logisim-evolution` is available for
-[download in compiled form](https://github.com/logisim-evolution/logisim-evolution/releases)
-with ready to use installable packages for Windows, macOS, and Linux
-or in [source code form](https://github.com/logisim-evolution), which you can [build yourself](docs/developers.md).
-
-The following [platform specific packages](https://github.com/logisim-evolution/logisim-evolution/releases)
-include the Java runtime and do not require it to be installed separately:
-
-* `logisim-evolution_<version>-1_amd64.deb`: Debian package (also suitable for Ubuntu and derivatives),
-* `logisim-evolution-<version>-1.x86_64.rpm`: Package for Fedora/Redhat/CentOS/SuSE Linux distributions,
-* `logisim-evolution-<version>_amd64.snap`: The [Snap](https://snapcraft.io/docs) archive for all
-  supported Linux distributions (also available in [Snapcraft store](https://snapcraft.io/logisim-evolution)),
-* `logisim-evolution-<version>-aarch64.msi`: Installer package for Microsoft Windows for Arm processors,
-* `logisim-evolution-<version>-amd64.msi`: Installer package for Microsoft Windows for Intel processors,
-* `logisim-evolution-<version>-aarch64.dmg`: macOS package for Apple processors,
-* `logisim-evolution-<version>-x86_64.dmg`: macOS package for Intel processors (also runs on Apple processors in simulation).
-
-The Java JAR [`logisim-evolution-<version>-all.jar`](https://github.com/logisim-evolution/logisim-evolution/releases)
-is also available and can be run on any system with a supported Java runtime installed.
-
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/logisim-evolution)
-
----
-
-**Note for macOS users**:
-The Logisim-evolution.app is not signed with an Apple approved certificate.
-
-When launching the application for the first time, you will have to start it via the "Open" entry in the
-application icon's context menu in the macOS Finder. This is either done by clicking the application
-icon with the right mouse button or holding down <kbd>CTRL</kbd> while clicking the icon with the
-left mouse button. This will open a panel asking you to verify that you wish to launch the application.
-On more recent versions of macOS, the panel will only give you a choice of moving the app to the trash or Cancel.
-On those systems, click Cancel, open `System Preferences`, and select `Security & Privacy`.
-There you may need to click the lock to make changes and authenticate with an administrative acccount.
-It should show an option to open the app.
-See [Safely open apps on your Mac](https://support.apple.com/en-us/HT202491) for more information.
-
-Depending on your security settings, you may also get a panel asking if you wish to allow it to accept
-network connections. You can click "Deny" as we do not need network access currently nor we do request any.
-
-### Package Manager ###
-
-`Logisim-evolution` is available from a bunch of [package managers](https://repology.org/project/logisim-evolution/versions).  
-Note that these (except for Snap) are not maintained by the core developers.  
-If you should observe a bug in Logisim-evolution while using one of these packages,
-first make sure that it can be reproduced with the most recent official packages
-[provided through this repository](https://github.com/logisim-evolution/logisim-evolution/releases)
-and ideally the HEAD of our [main branch](https://github.com/logisim-evolution/logisim-evolution/tree/main)
-before [creating an issue](https://github.com/logisim-evolution/logisim-evolution/issues) on
-the official [Logisim-evolution repository](https://github.com/logisim-evolution/logisim-evolution).  
-Otherwise, report the issue to the package maintainer!
-
-* [Snap](https://snapcraft.io/logisim-evolution) (`snap install logisim-evolution`)
-* [Flathub](https://flathub.org/apps/details/com.github.reds.LogisimEvolution) (`flatpak install flathub com.github.reds.LogisimEvolution`)
-* [Homebrew](https://formulae.brew.sh/cask/logisim-evolution) (`brew install --cask logisim-evolution`)
-* [MacPorts](https://ports.macports.org/port/logisim-evolution/details/) (`port install logisim-evolution`)
-* [Chocolatey](https://community.chocolatey.org/packages/logisim-evolution) (`choco install logisim-evolution`)
-* [winget](https://winget.run/pkg/logisim-evolution/logisim-evolution) (`winget install -e --id logisim-evolution.logisim-evolution`)
-* [Arch User Repository](https://aur.archlinux.org/packages/logisim-evolution)
-
-### Nightly builds ###
-
-We also offer builds based on the current state of the
-[main](https://github.com/logisim-evolution/logisim-evolution/tree/main) branch.
-If the main branch has been changed,
-a new `Nightly build` is created at midnight [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
-
-Note that these builds may be unstable since the main branch is a work in progress.
-
-To get nightly downloads, please
-[click here](https://github.com/logisim-evolution/logisim-evolution/actions/workflows/nightly.yml)
-and browse to the last successful run of `Nightly` worker, which should be on top. Note that due to Github internals,
-all files are provided as ZIP archives. You must unzip the downloaded file to get the installation package.
-
-Please share your experience in [Discussions](https://github.com/logisim-evolution/logisim-evolution/discussions)
-or [open a ticket](https://github.com/logisim-evolution/logisim-evolution/issues)
-if you found a bug or have suggestions for improvement.
-
----
-
-## License ##
-
-* `Logisim-evolution` is copyrighted ©2001-2023 by Logisim-evolution [developers](docs/credits.md).
-* This is free software licensed under [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a href="https://github.com/logisim-evolution/logisim-evolution"><img src="/logisim-evolution/logisim-evolution/raw/main/docs/img/logisim-evolution-logo.png" alt="逻辑模拟进化" style="max-width: 100%;"></a></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">逻辑模拟进化</font></font></h1><a id="user-content-logisim-evolution" class="anchor" aria-label="永久链接：Logisim-evolution" href="#logisim-evolution"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录</font></font></strong>
+<ul dir="auto">
+<li><a href="#features"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特征</font></font></a></li>
+<li><a href="#requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要求</font></font></a></li>
+<li><strong><a href="#download"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></a></strong>
+<ul dir="auto">
+<li><a href="#package-manager"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包管理器</font></font></a></li>
+<li><a href="#nightly-builds"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每晚构建（不稳定）</font></font></a></li>
+</ul>
+</li>
+<li><a href="/logisim-evolution/logisim-evolution/blob/main/docs/pics.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logisim-evolution 图片</font></font></a></li>
+<li><a href="/logisim-evolution/logisim-evolution/blob/main/docs/docs.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更多信息</font></font></a></li>
+<li><a href="https://github.com/logisim-evolution/logisim-evolution/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">错误报告和功能请求</font></font></a></li>
+<li><a href="/logisim-evolution/logisim-evolution/blob/main/docs/developers.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于开发商</font></font></a></li>
+<li><a href="/logisim-evolution/logisim-evolution/blob/main/docs/developers.md#how-to-contribute"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如何贡献</font></font></a></li>
+<li><a href="/logisim-evolution/logisim-evolution/blob/main/docs/credits.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">制作人员</font></font></a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特征</font></font></h2><a id="user-content-features" class="anchor" aria-label="永久链接：特点" href="#features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是用于设计和模拟数字逻辑电路的教育软件。
+</font></font><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免费</font></font><a href="#license"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/logisim-evolution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开源</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="#requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跨</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">平台</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目亮点：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">易于使用的电路设计器，</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">逻辑电路模拟，</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">计时图（查看电路中信号的演变），</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子板集成（原理图可以在真实硬件上模拟），</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VHDL 组件（组件行为可以在 VHDL 中指定！），</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TCL/TK控制台（电路和用户之间的接口），</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">庞大的组件库（LED、TTL、开关、SoC），</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font><a href="/logisim-evolution/logisim-evolution/blob/main/docs/docs.md#translations"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多种语言</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和更多！</font></font></li>
+</ul>
+<p dir="auto"><a href="/logisim-evolution/logisim-evolution/blob/main/docs/pics.md"><img src="/logisim-evolution/logisim-evolution/raw/main/docs/img/logisim-evolution-01-small.png" alt="逻辑模拟进化" style="max-width: 100%;"></a>
+<a href="/logisim-evolution/logisim-evolution/blob/main/docs/pics.md"><img src="/logisim-evolution/logisim-evolution/raw/main/docs/img/logisim-evolution-02-small.png" alt="逻辑模拟进化" style="max-width: 100%;"></a>
+<a href="/logisim-evolution/logisim-evolution/blob/main/docs/pics.md"><img src="/logisim-evolution/logisim-evolution/raw/main/docs/img/logisim-evolution-03-small.png" alt="逻辑模拟进化" style="max-width: 100%;"></a></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要求</font></font></h2><a id="user-content-requirements" class="anchor" aria-label="永久链接：要求" href="#requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是一个Java应用程序；因此，它可以运行在任何支持Java运行环境的操作系统上。它需要</font></font><a href="https://www.oracle.com/java/technologies/javase-downloads.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 16（或更高版本）</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h2><a id="user-content-download" class="anchor" aria-label="永久链接： 下载" href="#download"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以以
+</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编译形式下载</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+，并提供适用于 Windows、macOS 和 Linux 的可立即使用的安装包，也可以以</font></font><a href="https://github.com/logisim-evolution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">源代码形式下载</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，您可以</font></font><a href="/logisim-evolution/logisim-evolution/blob/main/docs/developers.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自行构建</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特定于平台的包</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+包含 Java 运行时，不需要单独安装：</font></font></p>
+<ul dir="auto">
+<li><code>logisim-evolution_&lt;version&gt;-1_amd64.deb</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：Debian 软件包（也适用于 Ubuntu 及其衍生版本），</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;-1.x86_64.rpm</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：Fedora/Redhat/CentOS/SuSE Linux 发行版的软件包，</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;_amd64.snap</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font><font style="vertical-align: inherit;">所有支持的 Linux 发行版的</font></font><a href="https://snapcraft.io/docs" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Snap存档（也可在</font></font></a><font style="vertical-align: inherit;"></font><a href="https://snapcraft.io/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Snapcraft 商店</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中找到），</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;-aarch64.msi</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：适用于 Arm 处理器的 Microsoft Windows 安装程序包，</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;-amd64.msi</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：适用于 Intel 处理器的 Microsoft Windows 安装程序包，</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;-aarch64.dmg</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：适用于 Apple 处理器的 macOS 软件包，</font></font></li>
+<li><code>logisim-evolution-&lt;version&gt;-x86_64.dmg</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：适用于 Intel 处理器的 macOS 软件包（模拟中也可以在 Apple 处理器上运行）。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java JAR</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/releases"><code>logisim-evolution-&lt;version&gt;-all.jar</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+也可用，并且可以在安装了受支持的 Java 运行时的任何系统上运行。</font></font></p>
+<p dir="auto"><a href="https://snapcraft.io/logisim-evolution" rel="nofollow"><img src="https://camo.githubusercontent.com/46aa03c94aa80f6545e01f2ce3966a1d7ae73552495f177b9b71f411408ce325/68747470733a2f2f736e617063726166742e696f2f7374617469632f696d616765732f6261646765732f656e2f736e61702d73746f72652d626c61636b2e737667" alt="从 Snap 商店获取" data-canonical-src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" style="max-width: 100%;"></a></p>
+<hr>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">macOS 用户注意</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：Logisim-evolution.app 未使用 Apple 批准的证书进行签名。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">首次启动应用程序时，您必须通过 macOS Finder 中应用程序图标的上下文菜单中的“打开”条目启动它。这可以通过用鼠标右键单击应用程序图标或按住</font></font><kbd>CTRL</kbd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鼠标左键单击该图标来完成。这将打开一个面板，要求您验证是否希望启动该应用程序。在更新版本的 macOS 上，该面板只会让您选择将应用程序移至垃圾箱或取消。在这些系统上，单击取消，打开</font></font><code>System Preferences</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，然后选择</font></font><code>Security &amp; Privacy</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。您可能需要单击锁进行更改并使用管理帐户进行身份验证。它应该显示一个打开应用程序的选项。有关更多信息，</font><font style="vertical-align: inherit;">请参阅</font></font><a href="https://support.apple.com/en-us/HT202491" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Mac 上安全打开应用程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">根据您的安全设置，您可能还会看到一个面板，询问您是否希望允许它接受网络连接。您可以单击“拒绝”，因为我们当前不需要网络访问，也没有请求任何网络访问。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包管理器</font></font></h3><a id="user-content-package-manager" class="anchor" aria-label="永久链接：包管理器" href="#package-manager"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以从一堆</font></font><a href="https://repology.org/project/logisim-evolution/versions" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包管理器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中获得。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+请注意，这些（Snap 除外）不是由核心开发人员维护的。如果您在使用这些软件包之一时发现 Logisim-evolution 中的错误，请首先确保可以使用</font><a href="https://github.com/logisim-evolution/logisim-evolution/releases"><font style="vertical-align: inherit;">通过此存储库提供的</font></a></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+最新官方软件包重现该错误
+，最好是我们</font><a href="https://github.com/logisim-evolution/logisim-evolution/tree/main"><font style="vertical-align: inherit;">主分支</font></a><font style="vertical-align: inherit;">
+的 HEAD，然后</font><font style="vertical-align: inherit;">
+再</font><font style="vertical-align: inherit;">在官方上</font><a href="https://github.com/logisim-evolution/logisim-evolution/issues"><font style="vertical-align: inherit;">创建问题</font></a><a href="https://github.com/logisim-evolution/logisim-evolution"><font style="vertical-align: inherit;">Logisim-evolution 存储库</font></a><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">
+否则，请将问题报告给软件包维护者！</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/releases"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/logisim-evolution/logisim-evolution/tree/main"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/logisim-evolution/logisim-evolution/issues"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/logisim-evolution/logisim-evolution"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font></p>
+<ul dir="auto">
+<li><a href="https://snapcraft.io/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">折断</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><code>snap install logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）</font></font></li>
+<li><a href="https://flathub.org/apps/details/com.github.reds.LogisimEvolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扁平轮毂</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( </font></font><code>flatpak install flathub com.github.reds.LogisimEvolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)</font></font></li>
+<li><a href="https://formulae.brew.sh/cask/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自制</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( </font></font><code>brew install --cask logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)</font></font></li>
+<li><a href="https://ports.macports.org/port/logisim-evolution/details/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mac 端口</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( </font></font><code>port install logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)</font></font></li>
+<li><a href="https://community.chocolatey.org/packages/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">巧克力味</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( </font></font><code>choco install logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)</font></font></li>
+<li><a href="https://winget.run/pkg/logisim-evolution/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温盖特</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">( </font></font><code>winget install -e --id logisim-evolution.logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)</font></font></li>
+<li><a href="https://aur.archlinux.org/packages/logisim-evolution" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arch 用户存储库</font></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每晚构建</font></font></h3><a id="user-content-nightly-builds" class="anchor" aria-label="永久链接：每晚构建" href="#nightly-builds"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还提供基于
+</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/tree/main"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分支当前状态的构建。如果主分支已更改，则会在</font><a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time" rel="nofollow"><font style="vertical-align: inherit;">UTC</font></a></font><code>Nightly build</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">午夜创建一个新分支</font><font style="vertical-align: inherit;">。</font></font><a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，这些构建可能不稳定，因为主分支正在进行中。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要获得夜间下载，请
+</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/actions/workflows/nightly.yml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">单击此处</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+并浏览到上次成功运行的</font></font><code>Nightly</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作程序，该工作程序应该位于顶部。请注意，由于 Github 内部结构，所有文件均以 ZIP 存档形式提供。您必须解压下载的文件才能获得安装包。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+如果您发现错误或有改进建议，请在</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/discussions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">讨论</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中分享您的经验</font><font style="vertical-align: inherit;">
+或</font></font><a href="https://github.com/logisim-evolution/logisim-evolution/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打开票证。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><code>Logisim-evolution</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版权所有 ©2001-2023 Logisim-evolution</font></font><a href="/logisim-evolution/logisim-evolution/blob/main/docs/credits.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"></font><a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是根据GNU 通用公共许可证 v3</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">授权的免费软件</font><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+</article></div>
